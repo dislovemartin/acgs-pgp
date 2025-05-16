@@ -1,0 +1,5 @@
+./start-mcp-server.sh: 行 30: .mcpServers."$SERVER_NAME".env // {} | to_entries | map("\(.key)=\(.value | gsub("\\${(.+?)}"; env["\\1"] // ""))" ) | join(" "): 错误的替换
+Starting MCP server: playwright
+Command: npx
+Arguments: '-y' '@executeautomation/playwright-mcp-server'
+Shutdown signal received

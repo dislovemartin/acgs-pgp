@@ -1,0 +1,78 @@
+{
+  "mcpServers": {
+    "version": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@smithery/cli@latest",
+        "run",
+        "mcp-package-version",
+        "--config",
+        "{}"
+      ]
+    },
+    "convex": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "convex@latest",
+        "mcp",
+        "start"
+      ]
+    },
+    "puppeteer": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-puppeteer"
+      ],
+      "env": {}
+    },
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@executeautomation/playwright-mcp-server"
+      ],
+      "env": {}
+    },
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp@latest"
+      ]
+    },
+    "supabase": {
+      "command": "python",
+      "args": [
+        "-m",
+        "supabase_mcp",
+        "--host",
+        "0.0.0.0",
+        "--port",
+        "8052"
+      ],
+      "env": {
+        "SUPABASE_URL": "${SUPABASE_URL}",
+        "SUPABASE_KEY": "${SUPABASE_KEY}"
+      }
+    },
+    "crawl4ai-rag": {
+      "command": "python",
+      "args": [
+        "-m",
+        "mcp_crawl4ai_rag",
+        "--host",
+        "0.0.0.0",
+        "--port",
+        "8051"
+      ],
+      "env": {
+        "OPENAI_API_KEY": "${OPENAI_API_KEY}",
+        "SUPABASE_URL": "${SUPABASE_URL}",
+        "SUPABASE_KEY": "${SUPABASE_KEY}"
+      }
+    }
+  }
+}

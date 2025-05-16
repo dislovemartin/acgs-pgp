@@ -1,0 +1,5 @@
+./start-mcp-server.sh: 行 30: .mcpServers."$SERVER_NAME".env // {} | to_entries | map("\(.key)=\(.value | gsub("\\${(.+?)}"; env["\\1"] // ""))" ) | join(" "): 错误的替换
+Starting MCP server: supabase
+Command: python
+Arguments: '-m' 'supabase_mcp' '--host' '0.0.0.0' '--port' '8052'
+/home/dislove/acgs-pgp/.venv/bin/python: No module named supabase_mcp

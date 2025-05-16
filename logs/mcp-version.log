@@ -1,0 +1,6 @@
+./start-mcp-server.sh: 行 30: .mcpServers."$SERVER_NAME".env // {} | to_entries | map("\(.key)=\(.value | gsub("\\${(.+?)}"; env["\\1"] // ""))" ) | join(" "): 错误的替换
+Starting MCP server: version
+Command: npx
+Arguments: '-y' '@smithery/cli@latest' 'run' 'mcp-package-version' '--config' '{}'
+2025-05-16T11:13:11.830Z [Runner] Connecting to server: {"id":"mcp-package-version","connectionTypes":["stdio","http"]}
+2025-05-16T11:13:11.830Z [Runner] Error: API key is required for remote connections

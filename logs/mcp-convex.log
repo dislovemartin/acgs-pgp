@@ -1,0 +1,4 @@
+./start-mcp-server.sh: 行 30: .mcpServers."$SERVER_NAME".env // {} | to_entries | map("\(.key)=\(.value | gsub("\\${(.+?)}"; env["\\1"] // ""))" ) | join(" "): 错误的替换
+Starting MCP server: convex
+Command: npx
+Arguments: '-y' 'convex@latest' 'mcp' 'start'

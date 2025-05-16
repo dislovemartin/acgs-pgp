@@ -1,0 +1,5 @@
+./start-mcp-server.sh: 行 30: .mcpServers."$SERVER_NAME".env // {} | to_entries | map("\(.key)=\(.value | gsub("\\${(.+?)}"; env["\\1"] // ""))" ) | join(" "): 错误的替换
+Starting MCP server: crawl4ai-rag
+Command: python
+Arguments: '-m' 'mcp_crawl4ai_rag' '--host' '0.0.0.0' '--port' '8051'
+/home/dislove/acgs-pgp/.venv/bin/python: No module named mcp_crawl4ai_rag

@@ -1,0 +1,5 @@
+./start-mcp-server.sh: 行 30: .mcpServers."$SERVER_NAME".env // {} | to_entries | map("\(.key)=\(.value | gsub("\\${(.+?)}"; env["\\1"] // ""))" ) | join(" "): 错误的替换
+Starting MCP server: context7
+Command: npx
+Arguments: '-y' '@upstash/context7-mcp@latest'
+Context7 Documentation MCP Server running on stdio
